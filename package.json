@@ -1,0 +1,42 @@
+{
+  "name": "public-email-list",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "email",
+    "public",
+    "public email list"
+  ],
+  "homepage": "https://github.com/jxdp/public-email-list",
+  "bugs": {
+    "url": "https://github.com/jxdp/public-email-list/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jxdp/public-email-list.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "jxdp",
+    "url": "https://github.com/jxdp"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "lint": "eslint . --ext ts,js,json --fix",
+    "prepublishOnly": "npm run lint && npm run build && npm run test",
+    "test": "NODE_ENV=test node --import tsx --test **/*.test.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.6",
+    "@types/node": "^18",
+    "eslint": "^8.57.0",
+    "eslint-config-tip": "^1.0.0",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}
