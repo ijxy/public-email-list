@@ -1,5 +1,5 @@
 export function getEmailDomain(email: string) {
-  return email.toLowerCase().split("@")[1];
+  return email.toLowerCase().split("@")[1] || "";
 }
 
 export function isPublicEmail(email: string) {
